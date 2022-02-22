@@ -7,6 +7,8 @@
 
 <script>
   // import LineChart from './LineChart.js'
+import "chartjs-plugin-doughnutlabel";
+import ChartDataLabels from "chartjs-plugin-datalabels";
 
   export default {
     // components: {
@@ -27,7 +29,15 @@
           datasets: [
             {
               label: "Data One",
-              backgroundColor: ["#a3c7c9", "#889d9e", "#647678", "f87979"],
+              backgroundColor: [
+                "#a3c7c9", 
+                "#889d9e", 
+                "#647678", 
+                "f87979",
+                "#389d9e",
+                "#689d9e",
+                "#881d9e",
+              ],
               data: [60, 13, 18, 13, 17, 15,41]
             }
           ]
@@ -51,7 +61,15 @@
           },
           responsive: true,
           maintainAspectRatio: false,
-          
+          ChartDataLabels,
+          datalabels: {
+            // display: false,
+            color: "black",
+            font: {
+              size: 14,
+              weight: "bold"
+            }
+          }
         }
       }
     },

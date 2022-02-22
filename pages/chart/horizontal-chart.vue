@@ -110,6 +110,9 @@
         //   ]
         // },
         options: {
+          hover: {
+            animationDuration: 0
+          },
           scales: {
             yAxes: [{
               ticks: {
@@ -148,14 +151,18 @@
           legend: {
             display: false
           },
-          tooltips: {
-            enabled: true,
-            mode: 'single',
-            callbacks: {
-              label: function(tooltipItems, data) {
-                return '$' + tooltipItems.yLabel;
-              }
-            }
+          // tooltips: {
+          //   enabled: true,
+          //   mode: 'single',
+          //   // callbacks: {
+          //   //   label: function(tooltipItems, data) {
+          //   //     // return '$' + tooltipItems.yLabel;
+          //   //     return tooltipItems.yLabel;
+          //   //   }
+          //   // }
+          // },
+           tooltips: {
+            enabled: false,
           },
           responsive: true,
           maintainAspectRatio: false,
